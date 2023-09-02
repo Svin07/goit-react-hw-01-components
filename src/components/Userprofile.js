@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default function Profile({ username, tag, location, avatar, stats: { followers, views, likes } }) {
     
@@ -33,16 +33,13 @@ return (<div className="profile">
 
 }
 
-// Profile.PropTypes = {
-//     username: PropTypes.string,
-//     views: PropTypes.number,
-//     likes: PropTypes.number,
-//     followers: PropTypes.number,
-//     stats: PropTypes.shape({}),
-//     avatar: PropTypes.string,
-//     location: PropTypes.string,
-//     tag: PropTypes.string,
-// };
+Profile.propTypes = {
+    username: PropTypes.string.isRequired,
+    stats: PropTypes.shape({}).isRequired,
+    avatar: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+};
 
 // "username": "Jacques Gluke",
 // "tag": "jgluke",
@@ -55,3 +52,7 @@ return (<div className="profile">
 // }
 
 // { username, tag, location, avatar, stats: { followers, views, likes } }
+
+    // views: PropTypes.number.isRequired,
+    // likes: PropTypes.number.isRequired,
+    // followers: PropTypes.number.isRequired,
