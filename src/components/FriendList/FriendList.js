@@ -13,7 +13,8 @@ export default function FriendList({friends}) {
                 avatar={friend.avatar}
                 friendName={friend.name}
                 isOnline={friend.isOnline}
-                ></FriendListItem>
+            />
+                 
          
   
            ))
